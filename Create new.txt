@@ -1,0 +1,47 @@
+1:
+For React:
+npm create vite@5
+npm install bootstrap
+
+2:
+For Api: L:\Work\ASP NET Course\Practice\reactdotnet\ReactWeb> cd ..
+PS L:\Work\ASP NET Course\Practice\reactdotnet> mkdir api
+
+
+    Directory: L:\Work\ASP NET Course\Practice\reactdotnet
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          4/9/2024   2:35 PM                api
+
+
+PS L:\Work\ASP NET Course\Practice\reactdotnet> cd api
+PS L:\Work\ASP NET Course\Practice\reactdotnet\api> dotnet new webapi -minimal
+The template "ASP.NET Core Web API" was created successfully.
+
+Processing post-creation actions...
+Restoring L:\Work\ASP NET Course\Practice\reactdotnet\api\api.csproj:
+  Determining projects to restore...
+  Restored L:\Work\ASP NET Course\Practice\reactdotnet\api\api.csproj (in 25.17 sec).
+Restore succeeded.
+
+
+databse:
+dotnet add package Microsoft.EntityFramework.Core.Sqlite
+Migrations:
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+PS L:\Work\ASP NET Course\Practice\reactdotnet\api> dotnet tool install --global dotnet-ef
+You can invoke the tool using the following command: dotnet-ef
+Tool 'dotnet-ef' (version '8.0.3') was successfully installed.
+PS L:\Work\ASP NET Course\Practice\reactdotnet\api> dotnet ef migrations add initial
+Build started...
+Build succeeded.
+Done. To undo this action, use 'ef migrations remove'
+
+PS L:\Work\ASP NET Course\Practice\reactdotnet\api> dotnet ef database update       
+Build started...
+Build succeeded.
+Applying migration '20240409103130_initial'.
+Done.
